@@ -1,0 +1,9 @@
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzmPSrr1CPJPfBVqiBPp8t1H-f9X579O0chFWeu2yGHpeYx7eHT7pNbJU9e4YkQdpwI/exec'
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response =>swal('The Bough','Are you sure about these picks? They look Terrible to me. jk good luck')) 
+    .catch(error => console.error('Error!', error.message))
+})
